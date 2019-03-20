@@ -52,4 +52,4 @@ app.get("/status", (req, res, next) => {
   });
 });
 
-app.listen(3000);
+app.listen(process.env.LISTEN_PORT);
