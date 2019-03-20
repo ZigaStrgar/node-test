@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Client Status | Node IP Geolocation app</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.4/css/bulma.min.css"
+    />
+  </head>
+  <body>
+    <section class="section">
+      <div class="container">
+        <h1 class="title">
+          Node IP Geolocation app
+        </h1>
+        <div class="card">
+          <header class="card-header">
+            <p class="card-header-title">
+              <img src="<%= client.location.flag %>" width="35px" style="padding-right: 10px" /> <%= client.ip %>
+            </p>
+          </header>
+          <div class="card-content">
+            <div class="content">
+              <ul>
+                <li>City: <%= client.location.zip %> <%= client.location.city %></li>
+                <li>Region: <%= client.location.region %></li>
+                <li>Country: <%= client.location.country %></li>
+                <li>Geo: <%= client.location.geo.lat %> <%= client.location.geo.lng %></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

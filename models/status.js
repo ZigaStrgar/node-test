@@ -2,9 +2,15 @@ const mongoose = require("mongoose");
 
 exports.Schema = mongoose.Schema({
   ip: String,
-  country: String,
-  geo: {
+  location: {
+    zip: String,
+    city: String,
+    region: String,
+    country: String,
+    flag: String,
+    geo: {
       lat: Number,
-      lng: Number,
+      lng: Number
+    }
   }
 });
