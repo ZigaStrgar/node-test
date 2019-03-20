@@ -13,8 +13,9 @@ mongoose.connect("mongodb://localhost/testassignment", {
 });
 
 app.get("/status", (req, res, next) => {
-
-  const clientIP = req.connection.remoteAddress;
+  const clientIP = !req.headers.hasOwnProperty("x-forwarded-for")
+    ? req.connection.remoteAddress
+    : req.headers["x-forwarded-for"];
 
   Status.findOne({ ip: clientIP }, (err, docs) => {
     if (!docs) {
