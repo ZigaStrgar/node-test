@@ -17,3 +17,7 @@ To start the application just run the command bellow and server will start on th
 ```bash
 npm start
 ```
+
+## Possible upgrades
+
+Usage of [Express Bearer Token](https://www.npmjs.com/package/express-bearer-token) dependency as a way of authenticating requests.
