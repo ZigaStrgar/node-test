@@ -1,0 +1,27 @@
+{
+  "name": "test_assignment",
+  "version": "1.0.0",
+  "description": "Test assignment",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ZigaStrgar/node-test.git"
+  },
+  "author": "Ziga Strgar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ZigaStrgar/node-test/issues"
+  },
+  "homepage": "https://github.com/ZigaStrgar/node-test#readme",
+  "dependencies": {
+    "express": "^4.16.4",
+    "mongoose": "^5.4.19"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.10"
+  }
+}
