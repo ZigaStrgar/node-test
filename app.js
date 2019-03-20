@@ -13,6 +13,13 @@ mongoose.connect("mongodb://localhost/testassignment", {
 });
 
 app.get("/status", (req, res, next) => {
+  if (
+    req.headers.authorization !==
+    "Bearer bEeNCx9Dw13Agr8oud0XFvTCc8HroulIeOj1oUXW"
+  ) {
+    return res.send("You are not authorized to make this request!");
+  }
+
   const clientIP = !req.headers.hasOwnProperty("x-forwarded-for")
     ? req.connection.remoteAddress
     : req.headers["x-forwarded-for"];
