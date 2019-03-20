@@ -17,7 +17,7 @@ app.use("/", (req, res, next) => {
     req.headers.authorization !==
     "Bearer bEeNCx9Dw13Agr8oud0XFvTCc8HroulIeOj1oUXW"
   ) {
-    return res.render("errors", {
+    return res.status(401).render("errors", {
       errors: ["You are not authorized to make this request!"]
     });
   }
