@@ -26,4 +26,4 @@ app.use("/", (req, res, next) => {
 
 app.get("/status", statusesController.getStatus);
 
-app.listen(process.env.LISTEN_PORT);
+app.listen(process.env.LISTEN_PORT || 3000);
